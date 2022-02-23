@@ -43,6 +43,7 @@ class UnigramSampler:
 
         return negative_sample
 
+
 class NegativeSamplingLoss:
     def __init__(self, W, corpus, power=0.75, sample_size=5):
         self.sample_size = sample_size
