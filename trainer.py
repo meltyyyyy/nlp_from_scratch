@@ -1,6 +1,7 @@
 import numpy
 import time
 import matplotlib.pyplot as plt
+import numpy as np
 
 from utils import clip_grads
 
@@ -62,11 +63,8 @@ class Trainer:
         plt.ylabel('loss')
         plt.show()
 
+
 def remove_duplicate(params, grads):
-    '''
-    パラメータ配列中の重複する重みをひとつに集約し、
-    その重みに対応する勾配を加算する
-    '''
     params, grads = params[:], grads[:]  # copy list
 
     while True:
@@ -83,7 +81,7 @@ def remove_duplicate(params, grads):
                     grads.pop(j)
                 # 転置行列として重みを共有する場合（weight tying）
                 elif params[i].ndim == 2 and params[j].ndim == 2 and \
-                     params[i].T.shape == params[j].shape and np.all(params[i].T == params[j]):
+                        params[i].T.shape == params[j].shape and np.all(params[i].T == params[j]):
                     grads[i] += grads[j].T
                     find_flg = True
                     params.pop(j)
