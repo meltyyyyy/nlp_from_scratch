@@ -2,7 +2,7 @@ import pickle
 
 import numpy as np
 import config
-from cbow import CBOW
+from cbow.cbow import CBOW
 from dataset import ptb
 
 from optimizer import Adam
