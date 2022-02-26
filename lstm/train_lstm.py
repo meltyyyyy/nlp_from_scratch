@@ -1,4 +1,3 @@
-
 # ハイパーパラメータの設定
 from dataset import ptb
 from lstm.rnnlm import Rnnlm
