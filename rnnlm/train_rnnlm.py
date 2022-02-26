@@ -1,7 +1,7 @@
 # ハイパーパラメータの設定
 from dataset import ptb
 from optimizer import SGD
-from rnnlm.simple_rnnlm import SimpleRnnlm
+from lstm.rnnlm import SimpleRnnlm
 from trainer import RnnlmTrainer
 
 batch_size = 10
