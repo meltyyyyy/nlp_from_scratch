@@ -1,6 +1,6 @@
 import numpy as np
 
-from attention_layer import TimeAttention
+from attention.attention_layer import TimeAttention
 from seq2seq.seq2seq import Seq2seq, Encoder
 from time_layers import TimeSoftmaxWithLoss, TimeAffine, TimeLSTM, TimeEmbedding
 

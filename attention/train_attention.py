@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from attention_seq2seq import AttentionSeq2seq
+from attention.attention_seq2seq import AttentionSeq2seq
 from dataset import sequence
 from optimizer import Adam
 from trainer import Trainer
