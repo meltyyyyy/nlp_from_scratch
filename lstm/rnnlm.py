@@ -1,11 +1,13 @@
+import sys
 import numpy as np
-
-from base_model import BaseModel
+sys.path.append('..')
+from lstm.base_model import BaseModel
 from time_layers import TimeEmbedding, TimeLSTM, TimeAffine, TimeSoftmaxWithLoss
 
 
 class Rnnlm(BaseModel):
     def __init__(self, vocab_size=10000, wordvec_size=100, hidden_size=100):
+        super().__init__()
         V, D, H = vocab_size, wordvec_size, hidden_size
         rn = np.random.randn
 

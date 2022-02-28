@@ -1,8 +1,9 @@
 import os
 import pickle
-
+import sys
 import numpy as np
 
+sys.path.append('..')
 from config import GPU
 from utils import to_cpu
 
@@ -42,8 +43,8 @@ class BaseModel:
             params = pickle.load(f)
 
         params = [p.astype('f') for p in params]
-        if GPU:
-            params = [to_gpu(p) for p in params]
+        # if GPU:
+        #     params = [to_gpu(p) for p in params]
 
         for i, param in enumerate(self.params):
             param[...] = params[i]
