@@ -1,5 +1,5 @@
 from dataset import ptb
-from rnnlm_gen import RnnlmGen
+from seq2seq.rnnlm_gen import RnnlmGen
 
 corpus, word_to_id, id_to_word = ptb.load_data('train')
 vocab_size = len(word_to_id)
